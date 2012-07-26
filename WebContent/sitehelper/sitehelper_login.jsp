@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>ADMIN LOGIN PAGE</title>
-<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="../common/jquery-1.7.2.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#loginBtn").bind("click", function() {
@@ -19,7 +19,7 @@
 				$("#adminPwd").focus();
 				return false;
 			}
-			$.post("admchk.do", $("form").serialize(), function(data){
+			$.post("loginchk.do", $("form").serialize(), function(data){
 				alert(data);
 				if (data == 'ok') {
 					location.href = '/index.jsp';
@@ -39,7 +39,7 @@
 </script>
 </head>
 <body>
-	<h2 align="center">관리자 로그인</h2>
+	<h2>관리자 로그인</h2>
 
 	<form method="post">
 	ID :

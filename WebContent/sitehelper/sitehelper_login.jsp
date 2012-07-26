@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>ADMIN LOGIN PAGE</title>
-<script type="text/javascript" src="../common/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#loginBtn").bind("click", function() {
@@ -37,18 +37,44 @@
 		});
 	});
 </script>
+<style type="text/css">
+td{
+	border:1px solid red;
+	text-align:center;
+	vertical-align:middle;
+}
+div{
+	border:1px solid blue;
+	align:right;
+}
+</style>
+
 </head>
 <body>
-	<h2>관리자 로그인</h2>
+	<h2 align="center">관리자 로그인</h2>
 
 	<form method="post">
-	ID :
-	<input type="text" name="adminId" id="adminId" />
-	<br /> PW :
-	<input type="password" name="adminPwd" id="adminPwd" />
-	<br />
-	<button id="loginBtn">로그인</button>
+		<table style="width:300px" align="center" >
+			<tr>
+				<td style="width:35%">
+					<label>ID :</label></td>
+				<td style="width:35%">
+					<input type="text" name="adminId" id="adminId" />
+				</td>
+				<td rowspan="2" style="width:30%">
+					<button id="loginBtn">로그인</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>PW :</label></td>
+				<td>
+					<input type="password" name="adminPwd" id="adminPwd" />
+				</td>
+			</tr>
+		</table>
 	<!-- class="admchk.do" -->
 	</form>
 </body>
 </html>
+

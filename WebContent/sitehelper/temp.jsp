@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<form action="admchk.do" method="post">
+	ID : <input type="text" name="id" /> <br />
+	PW : <input type="password" name="pw" /> <br />
+	<input type="submit" /> <!-- class="admchk.do" --> 
+	</form>
 </body>
 </html>
